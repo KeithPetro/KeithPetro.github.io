@@ -1,0 +1,53 @@
+body {
+    font-family: Arial;
+    overflow: hidden;
+}
+
+.animation-container {
+    font-weight: 800;
+    font-size: 8em;
+    opacity: 1;
+}
+
+.animation-container svg {
+    width: 90%;
+    display: block;
+    top: 50%;
+    margin: -8% 0 0 5%;
+}
+
+.animation-container svg .text {
+    width: 100%;
+    fill:transparent;
+    stroke-width:3;
+    stroke-linejoin:round;
+    stroke-dasharray:90, 310;
+    stroke-dashoffset:0;
+    animation: text 8s infinite linear;
+}
+
+.animation-container svg .text:nth-child(4n+1) {
+    stroke:purple;
+    animation-delay: -2s;
+}
+
+.animation-container svg .text:nth-child(4n+2) {
+    stroke:blue;
+    animation-delay: -4s;
+}
+
+.animation-container svg .text:nth-child(4n+3) {
+    stroke:red;
+    animation-delay: -6s;
+}
+
+.animation-container svg .text:nth-child(4n+4) {
+    stroke:orange;
+    animation-delay: -8s;
+}
+
+@-webkit-keyframes text {
+    100% {
+        stroke-dashoffset:-400;
+    }
+}
